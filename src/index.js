@@ -48,6 +48,8 @@ module.exports = function parse(feedXML, callback) {
         'itunes:author': 'author',
         'itunes:summary': 'summary',
         'itunes:subtitle': 'description.short',
+        'itunes:explicit': 'explicit',
+        'itunes:keywords': 'keywords',
         'description': 'description.long',
         'ttl': text => { return { ttl: parseInt(text) }; },
         'pubDate': text => { return { updated: new Date(text) }; },
